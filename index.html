@@ -32,7 +32,7 @@
     <h1>Test du service /api/maths</h1>
     <div>
         <label for="serverUrl">Url du service</label>
-        <input type="text" id="serverUrl" value="https://thomaslucianotp2-client.glitch.me/api/maths" style="width: 500px;">
+        <input type="text" id="serverUrl" value="https://thomaslucianotp2-serveur.glitch.me/api/maths?" style="width: 500px;">
         <button onclick="startTest()">Démarrer le test</button>
     </div>
 
@@ -79,7 +79,7 @@
                 const response = await fetch(serverUrl);
                 const jsonResponse = await response.json();
 
-                const statusText = response.ok ? "OK" : `Erreur`;
+                const statusText = response.ok ? "OK" : `Erreur (${response.status})`;
 
                 tests.push({
                     status: statusText,
