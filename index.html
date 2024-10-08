@@ -79,7 +79,7 @@
                 const response = await fetch(serverUrl);
                 const jsonResponse = await response.json();
 
-                const statusText = response.ok ? "OK" : `Erreur (${response.status})`;
+                const statusText = response.ok ? "OK" : `Erreur`;
 
                 tests.push({
                     status: statusText,
